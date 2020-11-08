@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::fallback(function(){
+    return response()->json(['status' => 'error_not_found', 'message' => 'Not Found.'], 404);
+})->name('api.fallback.404');
+
 Route::apiResource('announcement', 'AnnouncementController')->except(['destroy', 'update']);
