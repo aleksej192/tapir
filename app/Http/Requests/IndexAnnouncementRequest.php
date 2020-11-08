@@ -16,7 +16,7 @@ class IndexAnnouncementRequest extends ApiRequest
     {
         return [
             'sort_field' => ['sometimes', 'in:price,created_at'],
-            'title' => ['sometimes', 'in:desc,asc'],
+            'sort_direction' => ['sometimes', 'in:desc,asc'],
         ];
     }
 
