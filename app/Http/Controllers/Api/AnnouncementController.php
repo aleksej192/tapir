@@ -30,7 +30,7 @@ class AnnouncementController extends ApiBaseController
      *                 type="array",
      *                 @OA\Items(
      *                     type="string",
-     *                     example="https://miro.medium.com/max/11730/0*ihTZPO4iffJ8n69_"
+     *                     example="https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search-v2_297x176.jpg"
      *                 )
      *             )
      *         ),
