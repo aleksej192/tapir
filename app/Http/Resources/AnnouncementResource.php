@@ -15,10 +15,11 @@ class AnnouncementResource extends JsonResource
      */
     public function toArray($request)
     {
+        $image = $this->images->first();
         return [
             'title' => $this->title,
             'price' => $this->price,
-            'photo' => $this->is_uploaded ? asset(Storage::url($this->images->first()->path)) : '',
+            'photo' => $image->is_uploaded ? asset(Storage::url($image->path)) : '',
         ];
     }
 }
