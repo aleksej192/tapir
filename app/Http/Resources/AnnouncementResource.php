@@ -18,7 +18,7 @@ class AnnouncementResource extends JsonResource
         return [
             'title' => $this->title,
             'price' => $this->price,
-            'photo' => asset(Storage::url($this->images->first()->path)),
+            'photo' => $this->is_uploaded ? asset(Storage::url($this->images->first()->path)) : '',
         ];
     }
 }
