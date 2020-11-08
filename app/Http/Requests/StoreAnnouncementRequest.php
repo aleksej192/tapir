@@ -19,7 +19,8 @@ class StoreAnnouncementRequest extends ApiRequest
             'title' => ['required', 'max:200'],
             'description' => ['required', 'max:1000'],
             'price' => ['required', 'int', 'min:0'],
-            'images' => ['required', 'array', 'min:1', 'max:3']
+            'images' => ['required', 'array', 'min:1', 'max:3'],
+            'images.*' => ['url']
         ];
     }
 }
